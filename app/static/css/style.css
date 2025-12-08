@@ -117,3 +117,13 @@ button:active{
 .login-card p a:hover{
     color: #1E7A1E;
 }
+
+/*------------------*/
+/* TELAS >= 768px   */
+/*------------------*/
+@media (min-width: 768px){
+    .login-card {
+        padding: 50px;
+        max-width: 600px;
+    }
+}
