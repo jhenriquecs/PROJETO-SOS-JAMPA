@@ -143,6 +143,10 @@ legend{
   padding: 0 8px;
 }
 
+#requisitos{
+    margin-bottom: 20px;
+}
+
 #requisitos li{
     color: red;
     margin: 4px 0;
