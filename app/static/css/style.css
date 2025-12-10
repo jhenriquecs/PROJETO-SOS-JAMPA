@@ -148,9 +148,14 @@ legend{
     margin: 4px 0;
     font-size: 14px;
     transition: color 0.2s;
+    margin-left: 5px;
 }
 
 #requisitos li.ok{
     color: green;
     font-weight: bold;
+}
+
+span{
+    color: red;
 }
