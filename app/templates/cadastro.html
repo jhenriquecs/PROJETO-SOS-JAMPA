@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página-de-Cadastro</title>
+    <link rel="stylesheet" href=".../static/css/stylesheet">
+</head>
+<body>
+    <div>
+        <div>
+            <img src="" alt="Logo da página">
+            <h1>SOS-JAMPA</h1>
+        </div>
+        <div>
+            <h2>Cadastrar</h2>
+            <form action="{{ url_for('cadastrar') }}" method="post">
+                <!--Agrupa informações pessoais-->
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <label for="name">Nome Completo:*</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome Completo" required>
+                    <label for="nome_usuario">Nome de Usuário:*</label>
+                    <input type="text" name="nome_usuario" id="nome_usuario" placeholder="Digite seu nome de usuário" required>
+                    <label for="email">E-mail:*</label>
+                    <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                    <label for="data_nascimento">Data de Nascimento:*</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" placeholder="dd/mm/yyyy" required>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" pattern="\(\d{2}\)\s\d{5}-\d{4}">
+                </fieldset>
+                <fieldset>
+                    <!--Agrupa senha e requisitos-->
+                    <legend>Segurança</legend>
+                    <label for="senha">Senha:*</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                    <ul id="requisitos">
+                        <li id="req-min">Mínimo 8 caracteres</li>
+                        <li id="req-mai">Contém letra MAIÚSCULA</li>
+                        <li id="req-minu">Contém letra minúscula</li>
+                        <li id="req-num">Contém número</li>
+                        <li id="req-esp">Contém caractere especial (@$!%*?&)</li>
+                    </ul>
+                    <script defer>
+                        const senha = document.getElementById("senha");
+
+                        senha.addEventListener("input", () => {
+                            const valor = senha.value;
+
+                            // Regras
+                            document.getElementById("req-min").classList.toggle("ok", valor.length >= 8);
+                            document.getElementById("req-mai").classList.toggle("ok", /[A-Z]/.test(valor));
+                            document.getElementById("req-minu").classList.toggle("ok", /[a-z]/.test(valor));
+                            document.getElementById("req-num").classList.toggle("ok", /\d/.test(valor));
+                            document.getElementById("req-esp").classList.toggle("ok", /[@$!%*?&]/.test(valor));
+                        });
+                    </script>
+                </fieldset>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

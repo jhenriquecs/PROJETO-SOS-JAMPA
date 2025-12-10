@@ -1,5 +1,5 @@
 # ignore venv criado pela virtualenv
-.venv/
+venv/
 __pycache__/
 *.pyc
 .env

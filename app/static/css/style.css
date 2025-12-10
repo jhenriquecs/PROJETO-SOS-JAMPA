@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /*-----------------------*/
 /*    MOBILE FIRST      */
 /*---------------------*/
@@ -127,3 +128,35 @@ button:active{
         max-width: 600px;
     }
 }
+=======
+/*Cadastro*/
+
+fieldset{
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend{
+  font-weight: bold;
+  color: #007bff;
+  padding: 0 8px;
+}
+
+#requisitos{
+    list-style: none;
+}
+
+#requisitos li{
+    color: red;
+    margin: 4px 0;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+#requisitos li.ok{
+    color: green;
+    font-weight: bold;
+}
+>>>>>>> Stashed changes
