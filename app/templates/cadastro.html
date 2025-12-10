@@ -7,12 +7,12 @@
     <link rel="stylesheet" href=".../static/css/stylesheet">
 </head>
 <body>
-    <div>
-        <div>
-            <img src=".../static/img/folha.svg" alt="Logo da página">
-            <h1>SOS-JAMPA</h1>
+    <div class="container">
+        <div class="login-header">
+            <img src=".../static/img/folha.svg" alt="Logo da página" class="login-logo">
+            <h1 class="login-title">SOS-JAMPA</h1>
         </div>
-        <div>
+        <div class="login-card">
             <h2>Cadastrar</h2>
             <form action="{{ url_for('cadastrar') }}" method="post">
                 <!--Agrupa informações pessoais-->
