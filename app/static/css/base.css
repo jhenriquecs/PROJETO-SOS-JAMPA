@@ -1,6 +1,8 @@
 /*-----------------------*/
-/*    MOBILE FIRST      */
-/*---------------------*/
+/*      Base Global       /
+/*-----------------------*/
+
+@import url(.../static/fonts/fontes.css);
 
 *{
     margin: 0;
@@ -15,18 +17,21 @@ body{
     font-family: 'Inter', sans-serif;
 }
 
+/*-----------------------*/
+/*      Componentes       /
+/*-----------------------*/
 .container{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: auto;
     min-height: 100dvh;
+    padding-bottom: 40px;
 }
 
-/* Card de login */
-.login-card{
+.card{
     background: #FFFFFF;
     padding: 30px;
-    margin: auto;
+    margin: 40px auto 0 auto; 
     width: 90%;
     max-width: 400px;
     border-radius: 5px;
@@ -34,7 +39,7 @@ body{
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.login-header{
+.card-header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,23 +49,39 @@ body{
     margin-right: 30px;
 }
 
-.login-logo{
+.card-logo{
     width: 40px;
     height: 40px;
 }
 
-.login-title{
+.card-title{
     font-size: 28px;
     font-weight: bold;
     color: #1E7A1E;
     
 }
 
-.login-card h2{
+.card-text p{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/*------------------*/
+/* TELAS >= 768px   */
+/*------------------*/
+@media (min-width: 768px){
+    .card {
+        padding: 50px;
+        max-width: 600px;
+    }
+}
+
+h2{
     font-size: 24px;
     margin-bottom: 5px;
 }
 
+/*Inputs e labels*/
 label{
     font-size: 12px;
     font-weight: bold;
@@ -103,54 +124,13 @@ button:active{
     transform: scale(0.97);
 }
 
-.login-card p{
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.login-card p a{
+/*Links*/
+a{
     color: #0B3D0B;
     text-decoration: none;
     transition: color 0.15s ease;
 }
 
-.login-card p a:hover{
+a:hover{
     color: #1E7A1E;
-}
-
-/*------------------*/
-/* TELAS >= 768px   */
-/*------------------*/
-@media (min-width: 768px){
-    .login-card {
-        padding: 50px;
-        max-width: 600px;
-    }
-}
-
-/*Cadastro*/
-
-fieldset{
-  border: 2px solid #333333;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-}
-
-legend{
-  font-weight: bold;
-  color: #333333;
-  padding: 0 8px;
-}
-
-#requisitos li{
-    color: red;
-    margin: 4px 0;
-    font-size: 14px;
-    transition: color 0.2s;
-}
-
-#requisitos li.ok{
-    color: green;
-    font-weight: bold;
 }

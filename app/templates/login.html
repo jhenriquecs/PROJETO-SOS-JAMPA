@@ -1,44 +1,30 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOS-JAMPA </title>
-    <link rel="icon" type="image/svg" href="../static/img/folha.svg">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+{% block title%}Login-SOS-JAMPA{% endblock %}
 
-</head>
+{% block before_main %}
+    <header class="card-header">
+        <img src=".../static/img/folha.svg" alt="Logo da página" class="card-logo">
+        <h1 class="card-title">SOS-JAMPA</h1>
+    </header>
+{% endblock %}
 
-<body>
+{% block content %}
     <div class="container">
-        <div class="login-header">
-            <img src="../static/img/folha.svg" alt="Logo" class="login-logo">
-            <h1 class="login-title">SOS-JAMPA</h1>
-        </div>
-        <div class="login-card">
-             <h2>Entrar</h2>
+    <div class="card">
+        <h2>Entrar</h2>
+        <form action="index.html" method="post">
+            <label for="email-user">Email ou nome de usuário</label>
+            <input id="email-user" type="text" required>
 
-            <form action="index.html" method="post">
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" required>
 
-
-                <label for="email-user">Email ou nome de usuário</label>
-                <input id="email-user" type="text" required>
-
-                <label for="senha">Senha</label>
-                <input id="senha" type="password" required>
-
-                <button type="submit">Entrar</button>
-            </form>
-
-            <p>
-                Não possui uma conta? Se cadastre <a href="#">aqui</a>
-            </p>
-        </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>
+            Não possui uma conta? Se cadastre <a href="#">aqui</a>
+        </p>
     </div>
-
-
-</body>
-
-</html>
+</div>
+{% endblock %}

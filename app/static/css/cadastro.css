@@ -1,0 +1,38 @@
+/*-----------------------*/
+/*    MOBILE FIRST      */
+/*---------------------*/
+/*Cadastro*/
+fieldset{
+  border: 2px solid #333333;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend{
+  font-weight: bold;
+  color: #333333;
+  padding: 0 8px;
+}
+
+#requisitos{
+    margin-bottom: 20px;
+}
+
+#requisitos li{
+    color: red;
+    margin: 4px 0;
+    font-size: 14px;
+    transition: color 0.2s;
+    margin-left: 5px;
+}
+
+#requisitos li.ok{
+    color: green;
+    font-weight: bold;
+}
+
+label.obrigatorio::after{
+  content: " *";
+  color: red;
+}
