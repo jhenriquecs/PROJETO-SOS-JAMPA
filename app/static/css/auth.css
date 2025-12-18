@@ -41,6 +41,11 @@ legend {
   font-size: 16px;
 }
 
+label.obrigatorio::after {
+    content: " *";
+    color: red;
+}
+
 .container > .card label {
   font-size: 14px;
   font-weight: 600;
@@ -136,11 +141,6 @@ legend {
 #requisitos li.ok::before {
   content: "✓";
   margin-right: 8px;
-}
-
-span {
-  color: #e74c3c;
-  font-weight: bold;
 }
 
 .container > .card button[type="submit"] {
