@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  {% if g.current_user %}
+  {% else %}
+  <p>Faça login ou cadastre-se para interagir.</p>
+  {% endif %}
+
+  <div class="posts-feed">
+    <h2>Denúncias Recentes</h2>
+    {% for p in posts %} {% include 'components/post_card.html' %} {% else %}
+    <p>Nenhuma denúncia encontrada.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

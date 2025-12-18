@@ -1,0 +1,38 @@
+<div class="post-card">
+  <div class="post-header">
+    {% if p.author_image %}
+    <img
+      src="{{ url_for('static', filename=p.author_image) }}"
+      alt="Avatar"
+      class="post-avatar"
+    />
+    {% else %}
+    <div class="post-avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+    {% endif %}
+    <div class="post-info">
+      <span class="post-author">{{ p.author_nick }}</span>
+      <span class="post-date">{{ p.created_at }}</span>
+    </div>
+  </div>
+  <div class="post-content">
+    <p>{{ p.description }}</p>
+    {% if p.image_path %} {% if p.image_path.startswith('http') %}
+    <img src="{{ p.image_path }}" alt="Imagem da denúncia" class="post-image" />
+    {% else %}
+    <img
+      src="{{ url_for('static', filename=p.image_path) }}"
+      alt="Imagem da denúncia"
+      class="post-image"
+    />
+    {% endif %} {% endif %}
+  </div>
+  <div class="post-footer">
+    {% if p.address %}
+    <span class="post-location"
+      ><i class="fa-solid fa-location-dot"></i> {{ p.address }}</span
+    >
+    {% endif %} {% if p.tags %}
+    <span class="post-tags"><i class="fa-solid fa-tag"></i> {{ p.tags }}</span>
+    {% endif %}
+  </div>
+</div>
