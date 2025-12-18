@@ -1,0 +1,42 @@
+[
+  {
+    "id": "post1",
+    "author_id": "55cf98c5-5487-422d-ad76-ac5b3f4f00d3",
+    "image_path": "uploads/limpeza-sanitária.webp",
+    "description": "Muito lixo acumulado na esquina da rua principal. Precisamos de coleta urgente!",
+    "address": "Rua das Flores, Centro",
+    "created_at": "08:30:00 18/12/2025",
+    "tags": "lixo; entulho",
+    "likes": []
+  },
+  {
+    "id": "post2",
+    "author_id": "user1",
+    "image_path": "uploads/cidades-cratera.webp",
+    "description": "Buraco na calçada atrapalhando a passagem de pedestres.",
+    "address": "Av. Epitácio Pessoa, 1234",
+    "created_at": "09:15:00 18/12/2025",
+    "tags": "calçada; buraco",
+    "likes": []
+  },
+  {
+    "id": "post1",
+    "author_id": "user1",
+    "image_path": "uploads/limpeza-sanitária.webp",
+    "description": "Muito lixo acumulado na esquina da rua principal. Precisamos de coleta urgente!",
+    "address": "Rua das Flores, Centro",
+    "created_at": "08:30:00 18/12/2025",
+    "tags": "lixo; entulho",
+    "likes": []
+  },
+  {
+    "id": "post2",
+    "author_id": "user1",
+    "image_path": "uploads/cidades-cratera.webp",
+    "description": "Buraco na calçada atrapalhando a passagem de pedestres.",
+    "address": "Av. Epitácio Pessoa, 1234",
+    "created_at": "09:15:00 18/12/2025",
+    "tags": "calçada; buraco",
+    "likes": []
+  }
+]
