@@ -1,0 +1,92 @@
+.post-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.post-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e4e6eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #65676b;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-author {
+  font-weight: 600;
+  color: #050505;
+  font-size: 15px;
+}
+
+.post-date {
+  font-size: 13px;
+  color: #65676b;
+}
+
+.post-content {
+  padding: 0 16px 16px;
+}
+
+.post-content p {
+  margin-bottom: 10px;
+  color: #050505;
+  font-size: 15px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  /* Make image edge-to-edge within the card */
+  margin-left: -16px;
+  margin-right: -16px;
+  width: calc(100% + 32px);
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.post-footer {
+  padding: 10px 16px;
+  border-top: 1px solid #e4e6eb;
+  display: flex;
+  gap: 15px;
+  color: #65676b;
+  font-size: 14px;
+}
+
+.post-location,
+.post-tags {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.post-location i,
+.post-tags i {
+  color: #65676b;
+}
