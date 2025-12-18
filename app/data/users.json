@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "user1",
+    "email": "mock@example.com",
+    "password_hash": "scrypt:32768:8:1$mockhash$mockhash",
+    "nickname": "User Teste",
+    "nome": "João da Silva",
+    "is_admin": false,
+    "profile_image": "",
+    "created_at": "12:00:00 01/01/2025"
+  },
+  {
+    "id": "55cf98c5-5487-422d-ad76-ac5b3f4f00d3",
+    "email": "jhenriques.costas@gmail.com",
+    "password_hash": "scrypt:32768:8:1$sBvQ2mSxzC6Ye2au$d34061b3404b8925f0dd6079b4a3f31c0ee6cc55b20e6a0c8c09fc45cc6a60e9c0c8119410c32542508f7a8543955dcf23ac478d5b4b9df58ace1d263f86511b",
+    "nickname": "henrique",
+    "nome": "Henrique Costa",
+    "is_admin": false,
+    "profile_image": "uploads/profile/profile_55cf98c5-5487-422d-ad76-ac5b3f4f00d3.jpg",
+    "created_at": "00:20:30 18/12/2025"
+  }
+]
