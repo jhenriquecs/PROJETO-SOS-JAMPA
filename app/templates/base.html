@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SOS-JAMPA</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <script
+      src="https://kit.fontawesome.com/20da255e36.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="{{ url_for('static', filename='js/main.js') }}?v=2"
+      defer
+    ></script>
+    {% block styles %}{% endblock %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <i class="fa-solid fa-leaf"></i>
+        <a href="{{ url_for('main.index') }}">SOS-JAMPA</a>
+      </div>
+      <div class="nav-right">
+        {% if session.get('user_id') %}
+        <span class="btn">{{ session.get('nickname') }}</span>
+        <a class="btn" href="{{ url_for('auth.logout') }}">Sair</a>
+        {% else %}
+        <a class="btn" href="{{ url_for('auth.login') }}">Login</a>
+        <a class="btn" href="{{ url_for('auth.register') }}">Registrar</a>
+        {% endif %}
+      </div>
+    </header>
+
+    <main class="container">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <ul class="flashes">
+        {% for cat,msg in messages %}
+        <li class="{{ cat }}">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% endwith %} {% block content %}{% endblock %}
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      </script>
+    </main>
+
+    <footer class="site-footer">© SOS-JAMPA - João Pessoa - PB</footer>
+  </body>
+</html>
