@@ -6,8 +6,13 @@ from . import bp
 
 def user_by_email(email):
     """
-    Busca um usuário pelo email no arquivo users.json.
-    Retorna o dicionário do usuário ou None se não encontrar.
+    Busca um usuário pelo endereço de email no banco de dados.
+    
+    Args:
+        email: Endereço de email a ser buscado (case-insensitive)
+        
+    Returns:
+        Dicionário com dados do usuário se encontrado, None caso contrário
     """
     users = read_json(current_app.config['USERS_JSON'])
     for u in users:
@@ -71,12 +76,14 @@ def register():
 @bp.route('/login', methods=['GET','POST'])
 def login():
     """
-    Rota de Login.
-    GET: Exibe o formulário de login.
-    POST: Autentica o usuário.
-    - Verifica banimento.
-    - Valida email e senha.
-    - Cria sessão do usuário.
+    Rota de autenticação de usuários no sistema.
+    
+    GET: Exibe o formulário de login
+    POST: Processa a autenticação do usuário
+        - Verifica se o email está banido no arquivo CSV
+        - Valida credenciais (email e senha)
+        - Cria sessão com dados do usuário (ID, email, nickname, admin status)
+        - Redireciona para a página inicial em caso de sucesso
     """
     if request.method == 'POST':
         email = request.form['email'].strip().lower()
@@ -85,7 +92,7 @@ def login():
         if not user or not check_password_hash(user['password_hash'], pwd):
             flash('Credenciais inválidas', 'error')
             return redirect(url_for('auth.login'))
-
+        
         session.clear()
         session['user_id'] = user['id']
         session['is_admin'] = bool(user.get('is_admin', False))
@@ -98,8 +105,8 @@ def login():
 @bp.route('/logout')
 def logout():
     """
-    Rota de Logout.
-    Encerra a sessão do usuário e redireciona para a Home.
+    Rota de desconexão do usuário.
+    Limpa todos os dados da sessão e redireciona para a página inicial.
     """
     session.clear()
     flash('Desconectado', 'info')
