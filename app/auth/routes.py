@@ -88,6 +88,30 @@ def login():
     if request.method == 'POST':
         email = request.form['email'].strip().lower()
         pwd = request.form['password']
+        is_banned = False
+        banned_csv = current_app.config['BANNED_CSV']
+        try:
+            with open(banned_csv, 'r', newline='', encoding='utf-8') as f:
+                lines = f.readlines()
+                for line_idx, line in enumerate(lines):
+                    if line_idx == 0:
+                        continue
+                    line = line.strip()
+                    if not line:
+                        continue
+                    parts = line.split(',', 1)
+                    if len(parts) > 0 and parts[0].strip().lower() == email:
+                        is_banned = True
+                        break
+        except FileNotFoundError:
+            is_banned = False
+        except (IOError, Exception) as e:
+            print(f"[ERRO] Falha ao verificar banimento: {e}")
+            is_banned = False
+
+        if is_banned:
+            flash('Conta banida. Contate suporte através do email: sos.jpa@gmail.com', 'error')
+            return redirect(url_for('auth.login'))
         user = user_by_email(email)
         if not user or not check_password_hash(user['password_hash'], pwd):
             flash('Credenciais inválidas', 'error')
@@ -98,8 +122,13 @@ def login():
         session['is_admin'] = bool(user.get('is_admin', False))
         session['nickname'] = user['nickname']
         session['email'] = user['email']
+
         flash('Logado com sucesso', 'success')
         return redirect(url_for('main.index'))
+    # GET: opcionalmente mostra um aviso vindo por querystring
+    reason = (request.args.get('reason') or '').strip()
+    if reason:
+        flash(reason, 'error')
     return render_template('login.html')
 
 @bp.route('/logout')
