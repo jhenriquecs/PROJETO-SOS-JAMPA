@@ -122,7 +122,7 @@ def login():
         session['is_admin'] = bool(user.get('is_admin', False))
         session['nickname'] = user['nickname']
         session['email'] = user['email']
-
+        session['profile_image'] = user.get('profile_image', '')
         flash('Logado com sucesso', 'success')
         return redirect(url_for('main.index'))
     # GET: opcionalmente mostra um aviso vindo por querystring
