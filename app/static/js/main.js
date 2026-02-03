@@ -1,4 +1,52 @@
-// ===== Toggle de visibilidade de senha =====
+/**
+ * Gerencia o clique no botão "expandir" dos cards de resíduos.
+ * Alterna a visibilidade dos detalhes do card (mostra/esconde).
+ */
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".btn-expand")) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const targetId = e.target.getAttribute("data-target");
+    const details = document.getElementById(targetId);
+
+    if (!details) return;
+
+    details.classList.toggle("hidden");
+    e.target.innerText = details.classList.contains("hidden")
+      ? "Ver detalhes"
+      : "Ocultar detalhes";
+  }
+});
+
+/**
+ * Função global para alternar visibilidade de detalhes de resíduos.
+ * Usada por handlers inline no HTML.
+ * @param {string} elementId - ID do elemento a ser mostrado/escondido
+ */
+if (!window.toggleDetails) {
+  window.toggleDetails = function (elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.classList.toggle("hidden");
+    }
+  };
+}
+
+/**
+ * Função global para abrir localização no Google Maps.
+ * Abre nova aba com coordenadas do ponto de coleta.
+ * @param {string} _nome - Nome do local (não usado)
+ * @param {number} lat - Latitude
+ * @param {number} lon - Longitude
+ * @param {string} _endereco - Endereço (não usado)
+ */
+if (!window.abrirNoMapa) {
+  window.abrirNoMapa = function (_nome, lat, lon, _endereco) {
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+    window.open(googleMapsUrl, "_blank");
+  };
+}
 const toggleSenha = document.getElementById("toggle-senha");
 if (toggleSenha) {
   toggleSenha.addEventListener("click", function (e) {
