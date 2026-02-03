@@ -1,0 +1,23 @@
+[
+  {
+    "id": "pilhas",
+    "title": "Pilhas e baterias",
+    "icon": "fa-battery-full",
+    "color": "#f39c12",
+    "desc": "Armazene em local seco e seguro. Pilhas comuns, alcalinas, recarregáveis e baterias de celulares podem ser entregues em pontos de coleta, supermercados e farmácias via logística reversa. Para eletrônicos maiores, use o serviço Cata-Treco (3213-4237)."
+  },
+  {
+    "id": "oleo",
+    "title": "Óleo de cozinha",
+    "icon": "fa-bottle-droplet",
+    "color": "#f1c40f",
+    "desc": "Armazene em garrafa plástica e entregue em pontos de coleta autorizados. Nunca descarte em ralo ou lixo comum. O óleo usado prejudica o meio ambiente e o sistema de tratamento de água."
+  },
+  {
+    "id": "eletronico",
+    "title": "Lixo Eletrônico",
+    "icon": "fa-plug",
+    "color": "#7f8c8d",
+    "desc": "Computadores, celulares, impressoras, televisões e cabos devem ser entregues em pontos de coleta especializados. Contêm materiais tóxicos que prejudicam o solo e a água. Visite a Sede da EMLUR ou os núcleos da cidade."
+  }
+]
