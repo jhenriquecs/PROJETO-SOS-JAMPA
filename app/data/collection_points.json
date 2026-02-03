@@ -1,0 +1,242 @@
+[
+  {
+    "id": "cf996197-8387-45c5-95fb-b23f997297df",
+    "name": "Pega pilhas",
+    "type": "pilhas",
+    "address": "pinheiro do paraná, 34 - paratibe",
+    "lat": -7.2055796,
+    "lon": -34.8344496
+  },
+  {
+    "id": "881ab093-72ec-4125-b80d-152d92d0ab07",
+    "name": "Ponto das cinco bocas",
+    "type": "metal",
+    "address": "avenida dom manoel paiva, S/N - Mandacaru",
+    "lat": -7.1090786,
+    "lon": -34.8588205
+  },
+  {
+    "id": "3af34c0a-9ff6-44ad-8c84-015a3dca4b5b",
+    "name": "Semear Sustentabilidade",
+    "type": "oleo",
+    "address": "BR-101 Km 88, Distrito Industrial, João Pessoa - PB",
+    "lat": -7.1944,
+    "lon": -34.9283
+  },
+  {
+    "id": "ca85190d-5b81-4af2-9fc6-e1d5ea809100",
+    "name": "ASCARE Sustentabilidade Ambiental",
+    "type": "oleo",
+    "address": "Rua Solita Vieira, João Pessoa - PB",
+    "lat": -7.139,
+    "lon": -34.876
+  },
+  {
+    "id": "b47d6f97-c0ac-49c2-bf04-df76c4005928",
+    "name": "BIP Óleo",
+    "type": "oleo",
+    "address": "Rua Argentina, João Pessoa - PB",
+    "lat": -7.1345,
+    "lon": -34.8695
+  },
+  {
+    "id": "8f755e4a-1d79-4983-8f00-36ab2dd6feee",
+    "name": "Natural Limp",
+    "type": "oleo",
+    "address": "Avenida Senador Arnon de Mello, João Pessoa - PB",
+    "lat": -7.1278,
+    "lon": -34.8844
+  },
+  {
+    "id": "b3067599-4bb3-4fb3-847a-dcdb0702659e",
+    "name": "Biocoleta",
+    "type": "oleo",
+    "address": "Avenida Getúlio Vargas, João Pessoa - PB",
+    "lat": -7.1456,
+    "lon": -34.891
+  },
+  {
+    "id": "7f7408ee-3ddc-4d56-9628-c889d9143cc9",
+    "name": "Green Sustentabilidade",
+    "type": "oleo",
+    "address": "Avenida Epitácio Pessoa, João Pessoa - PB",
+    "lat": -7.1223,
+    "lon": -34.8598
+  },
+  {
+    "id": "a1fccf74-d7ab-4d5e-b49c-204ad1c0c0bc",
+    "name": "EMLUR - Núcleo Cabo Branco",
+    "type": "oleo",
+    "address": "Avenida Paulino Perito, s/n, Cabo Branco - João Pessoa - PB",
+    "lat": -7.1388,
+    "lon": -34.8452
+  },
+  {
+    "id": "6cde399d-b940-40c1-a427-a0810c18aa07",
+    "name": "EMLUR - Núcleo Bessa",
+    "type": "oleo",
+    "address": "Linha 510, Bessa - João Pessoa - PB",
+    "lat": -7.1029,
+    "lon": -34.8278
+  },
+  {
+    "id": "46268487-23da-4696-ae94-dae2dfdf8f6b",
+    "name": "EMLUR - Núcleo Centro",
+    "type": "oleo",
+    "address": "Avenida Gouvêia da Nóbrega, Centro - João Pessoa - PB",
+    "lat": -7.1175,
+    "lon": -34.8805
+  },
+  {
+    "id": "7f35e1b4-af73-4256-b80d-10f471103956",
+    "name": "EMLUR - Núcleo Mangabeira",
+    "type": "oleo",
+    "address": "Rua Josefa Taveira, Mangabeira - João Pessoa - PB",
+    "lat": -7.1667,
+    "lon": -34.895
+  },
+  {
+    "id": "670c7c6a-7b87-4509-857f-f0a74b0229e3",
+    "name": "EMLUR - Sede",
+    "type": "pilhas",
+    "address": "Av. Minas Gerais, 177 - Jaguaribe, João Pessoa - PB",
+    "lat": -7.1412,
+    "lon": -34.8845
+  },
+  {
+    "id": "bafdd2c8-b5e5-437a-a8e8-061a559c8a0c",
+    "name": "Centro-Dia (Bica)",
+    "type": "pilhas",
+    "address": "Em frente ao Parque Arruda Câmara, João Pessoa - PB",
+    "lat": -7.1178,
+    "lon": -34.8815
+  },
+  {
+    "id": "6a55b86b-cb72-4a8d-b141-29902b971e32",
+    "name": "Carrefour - Aeroclube",
+    "type": "pilhas",
+    "address": "R. Bacharel Irenaldo de Albuquerque Chaves - Aeroclube, João Pessoa - PB",
+    "lat": -7.1256,
+    "lon": -34.8456
+  },
+  {
+    "id": "512817d8-bfe4-4005-b13c-37d0e115cf30",
+    "name": "Carrefour - Jardim São Paulo",
+    "type": "pilhas",
+    "address": "R. Empresário João Rodrigues Alves, 85 - Jardim São Paulo, João Pessoa - PB",
+    "lat": -7.1389,
+    "lon": -34.8912
+  },
+  {
+    "id": "bb43330a-1ff0-45cb-8d02-58889921520a",
+    "name": "Magazine Luiza - Mangabeira",
+    "type": "pilhas",
+    "address": "Av. Josefa Taveira - Mangabeira, João Pessoa - PB",
+    "lat": -7.1667,
+    "lon": -34.895
+  },
+  {
+    "id": "6584a342-fab5-443f-83aa-c888c950dec2",
+    "name": "Magazine Luiza - Estados",
+    "type": "pilhas",
+    "address": "Av. Presidente Epitácio Pessoa - Estados, João Pessoa - PB",
+    "lat": -7.1223,
+    "lon": -34.8598
+  },
+  {
+    "id": "45902938-9609-4778-867a-8765ab591254",
+    "name": "Farmácias Raia/Drogasil - Tambauzinho",
+    "type": "pilhas",
+    "address": "Tambauzinho, João Pessoa - PB",
+    "lat": -7.1067,
+    "lon": -34.8412
+  },
+  {
+    "id": "1639755a-7e82-42f1-aad3-e93f792bb685",
+    "name": "TRE-PB",
+    "type": "pilhas",
+    "address": "Rua Princesa Isabel, 204 - Tambiá, João Pessoa - PB",
+    "lat": -7.1389,
+    "lon": -34.8734
+  },
+  {
+    "id": "7367a555-ae8a-4174-8afe-8a025ac92960",
+    "name": "Recicla JP",
+    "type": "pilhas",
+    "address": "R. Diógenes Chianca, 955 - Água Fria, João Pessoa - PB",
+    "lat": -7.1645,
+    "lon": -34.8723
+  },
+  {
+    "id": "28dc450f-698a-43bf-9166-a32d91aca982",
+    "name": "Extra Hiper",
+    "type": "pilhas",
+    "address": "João Pessoa - PB",
+    "lat": -7.1234,
+    "lon": -34.8567
+  },
+  {
+    "id": "622a60e0-c3c0-44fd-823d-c169eb7986d2",
+    "name": "Assaí - Supermercado",
+    "type": "pilhas",
+    "address": "João Pessoa - PB",
+    "lat": -7.1445,
+    "lon": -34.8678
+  },
+  {
+    "id": "47d8006c-dffd-491f-903e-8087dec7a39e",
+    "name": "EMLUR - Sede",
+    "type": "eletronico",
+    "address": "Av. Minas Gerais, 177 - Estados, João Pessoa - PB",
+    "lat": -7.1412,
+    "lon": -34.8845
+  },
+  {
+    "id": "dcb8ae0d-ba7c-4d72-8181-f8f73cc6795d",
+    "name": "Escola de Línguas CNA",
+    "type": "eletronico",
+    "address": "Av. Senador Rui Carneiro, 416 - Miramar, João Pessoa - PB",
+    "lat": -7.1289,
+    "lon": -34.8534
+  },
+  {
+    "id": "f419d8c1-25c6-4e21-b0a6-69471fcaa413",
+    "name": "Centro Cultural de Mangabeira",
+    "type": "eletronico",
+    "address": "Rua Josefa Taveira - Mangabeira, João Pessoa - PB",
+    "lat": -7.1667,
+    "lon": -34.895
+  },
+  {
+    "id": "9641b682-e032-452c-9de3-7b19b52a925e",
+    "name": "EMLUR - Centro Dia (Bica)",
+    "type": "eletronico",
+    "address": "Av. Gouvêia da Nóbrega - Roger, João Pessoa - PB",
+    "lat": -7.1175,
+    "lon": -34.8805
+  },
+  {
+    "id": "930b482f-51c7-471d-b501-df768dbeee14",
+    "name": "EMLUR - Núcleo Tambaú",
+    "type": "eletronico",
+    "address": "Rua Aluísio França, 49 - Tambaú, João Pessoa - PB",
+    "lat": -7.0945,
+    "lon": -34.8234
+  },
+  {
+    "id": "e48deec2-6363-44ea-bd1f-8453582439ab",
+    "name": "EMLUR - Núcleo Mangabeira",
+    "type": "eletronico",
+    "address": "Praça do Coqueiral - Mangabeira, João Pessoa - PB",
+    "lat": -7.1667,
+    "lon": -34.895
+  },
+  {
+    "id": "63858b22-7fe6-4842-91d0-1ba022f1903d",
+    "name": "EMLUR - Núcleo Jaguaribe",
+    "type": "eletronico",
+    "address": "Rua Floriano Peixoto, S/N - Jaguaribe, João Pessoa - PB",
+    "lat": -7.1578,
+    "lon": -34.8923
+  }
+]
