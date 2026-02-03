@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/waste.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="waste-header">
+  <h2>Como descartar resíduos</h2>
+  <p>
+    Encontre o local correto para descartar seus resíduos e ajude o meio
+    ambiente.
+  </p>
+</div>
+
+<div id="wastes" class="waste-grid">
+  {% for w in wastes %}
+  <div class="waste-card" data-id="{{ w.id }}">
+    <div class="waste-icon-header" style="background-color: {{ w.color }}">
+      <i class="fas {{ w.icon }}"></i>
+    </div>
+    <div class="waste-card-content">
+      <h3>{{ w.title }}</h3>
+      <button type="button" class="btn-expand" onclick="toggleDetails('details-{{ w.id }}')">
+        Ver detalhes
+      </button>
+      <div id="details-{{ w.id }}" class="waste-details hidden">
+        <p>{{ w.desc }}</p>
+        <h4>Locais de coleta:</h4>
+        <div class="locations-list">
+          {% for loc in w.locations %}
+          <button 
+            class="location-btn" 
+            onclick="abrirNoMapa('{{ loc.name }}', {{ loc.lat }}, {{ loc.lon }}, '{{ loc.address }}')"
+            title="Clique para abrir no mapa"
+          >
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="location-name">{{ loc.name }}</span>
+            <span class="location-address">{{ loc.address }}</span>
+          </button>
+          {% else %}
+          <p>Nenhum local cadastrado.</p>
+          {% endfor %}
+        </div>
+        <div class="nearest-info">
+          <i class="fas fa-info-circle"></i> Clique em qualquer local para abrir no mapa.
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
