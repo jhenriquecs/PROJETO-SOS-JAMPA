@@ -75,6 +75,23 @@ if (toggleConfirmar) {
   });
 }
 
+/**
+ * Toggle de visibilidade para campo de senha no formulário de login.
+ */
+const toggleLogin = document.getElementById("toggle-password-login");
+if (toggleLogin) {
+  toggleLogin.addEventListener("click", function (e) {
+    e.preventDefault();
+    const passwordInput = document.getElementById("password");
+    const tipo = passwordInput.type === "password" ? "text" : "password";
+    passwordInput.type = tipo;
+    this.innerHTML =
+      tipo === "password"
+        ? '<i class="fas fa-eye"></i>'
+        : '<i class="fas fa-eye-slash"></i>';
+  });
+}
+
 // ===== Validação de requisitos de senha em tempo real =====
 const senha = document.getElementById("senha");
 if (senha) {
