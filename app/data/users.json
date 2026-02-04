@@ -16,7 +16,8 @@
     "nickname": "henrique",
     "nome": "Henrique Costa",
     "is_admin": true,
-    "profile_image": "uploads/profile/profile_55cf98c5-5487-422d-ad76-ac5b3f4f00d3.jpg",
-    "created_at": "00:20:30 18/12/2025"
+    "profile_image": "/static/uploads/55cf98c5-5487-422d-ad76-ac5b3f4f00d3/profile/21d653a5-63fa-4b39-97bf-a8504581cd4c-profile.jpg",
+    "created_at": "00:20:30 18/12/2025",
+    "cover_image": "/static/uploads/55cf98c5-5487-422d-ad76-ac5b3f4f00d3/cover/877ebadd-c98f-49c5-8b5f-8309a8ac4ca0-cover.jpg"
   }
 ]
