@@ -462,3 +462,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+if (!window.openDeleteConfirm) {
+  window.openDeleteConfirm = function (postId) {
+    var el = document.getElementById('delete-confirm-' + postId);
+    if (el) el.classList.add('show');
+  };
+}
+if (!window.closeDeleteConfirm) {
+  window.closeDeleteConfirm = function (postId) {
+    var el = document.getElementById('delete-confirm-' + postId);
+    if (el) el.classList.remove('show');
+  };
+}
+if (!window.submitDelete) {
+  window.submitDelete = function (postId) {
+    var form = document.getElementById('delete-form-' + postId);
+    if (form) form.submit();
+  };
+}
