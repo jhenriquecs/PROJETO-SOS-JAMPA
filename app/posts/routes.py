@@ -2,6 +2,7 @@ from flask import request, render_template, redirect, url_for, flash, current_ap
 from ..utils import read_json, append_json, ensure_json_file, write_json
 import uuid, datetime
 from . import bp
+import os
 
 # bp = Blueprint('posts', __name__)
 
