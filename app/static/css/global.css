@@ -1,4 +1,4 @@
-/* Variables */
+/* ===== CSS VARIABLES ===== */
 :root {
   --green-900: #0b3d0b;
   --green-700: #137a13;
@@ -8,7 +8,7 @@
   --bg: #f1fbf2;
 }
 
-/* Global */
+/* ===== GLOBAL STYLES ===== */
 * {
   box-sizing: border-box;
   font-family: Inter, Arial, sans-serif;
@@ -35,7 +35,7 @@ body {
   text-align: center;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .site-header {
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@ body {
   font-size: 20px;
 }
 .brand a {
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 .nav a {
@@ -64,6 +64,63 @@ body {
   gap: 8px;
 }
 
+.search {
+  position: relative;
+}
+
+.search form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search input {
+  padding: 8px 40px 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+.search input:focus {
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search button {
+  position: absolute;
+  right: 4px;
+  background: transparent;
+  border: none;
+  color: var(--green-700);
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.search button:hover {
+  background: rgba(46, 139, 87, 0.1);
+}
+
+.search button i {
+  font-size: 16px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--green-700);
+  color: white;
+}
+
+/* ===== HEADER RESPONSIVE ===== */
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
@@ -97,9 +154,22 @@ body {
     width: 100%;
   }
 
-  .nav-right > a {
+  .search {
     width: 100%;
-    text-align: center;
+    order: -1;
+  }
+
+  .search form {
+    width: 100%;
+  }
+
+  .search input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .search input:focus {
+    width: 100%;
   }
 
   .nav-right {
@@ -113,12 +183,4 @@ body {
     min-width: 100px;
     text-align: center;
   }
-}
-
-/* Footer */
-.site-footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--green-700);
-  color: white;
 }
