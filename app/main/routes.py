@@ -28,7 +28,8 @@ def index():
         p['author_nick'] = author['nickname'] if author else 'Anônimo'
         p['author_image'] = author['profile_image'] if author and author.get('profile_image') else ''
         
-    return render_template('index.html', posts=posts)
+    tags = read_json(current_app.config['TAGS_JSON'])
+    return render_template('index.html', posts=posts, tags=tags)
 
 @bp.route('/waste-info')
 def waste_info():
@@ -124,6 +125,10 @@ def profile():
                 joined_date = created
 
     return render_template('profile.html', user=target, posts=user_posts, is_owner=is_owner, joined_date=joined_date)
+
+@bp.route('/coming-soon')
+def coming_soon():
+    return render_template('base.html')
 
 @bp.route('/games')
 def games():
