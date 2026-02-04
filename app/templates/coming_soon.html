@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block styles %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/pages/coming_soon.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class="coming-soon-container">
+  <i class="fas fa-hard-hat coming-soon-icon"></i>
+  <h1 class="coming-soon-title">Em Breve</h1>
+  <p class="coming-soon-text">
+    Esta funcionalidade está em desenvolvimento e estará disponível em breve.
+  </p>
+  <a href="javascript:history.back()" class="coming-soon-btn"> Voltar </a>
+</div>
+{% endblock %}

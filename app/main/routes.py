@@ -130,9 +130,6 @@ def profile():
 
     return render_template('profile.html', user=target, posts=user_posts, is_owner=is_owner, joined_date=joined_date)
 
-@bp.route('/coming-soon')
-def coming_soon():
-    return render_template('base.html')
 
 @bp.route('/games')
 def games():
@@ -154,3 +151,7 @@ def games():
     games_list = read_json(current_app.config['GAMES_JSON'])
     
     return render_template('games.html', games=games_list)
+
+@bp.route('/coming-soon')
+def coming_soon():
+    return render_template('coming_soon.html')
