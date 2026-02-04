@@ -15,6 +15,12 @@ class Config:
     # Caminhos para os arquivos de dados JSON
     USERS_JSON = os.path.join(DATA_FOLDER, 'users.json')
     POSTS_JSON = os.path.join(DATA_FOLDER, 'posts.json')
+    WASTES_JSON = os.path.join(DATA_FOLDER, 'wastes.json')
+    COLLECTION_POINTS_JSON = os.path.join(DATA_FOLDER, 'collection_points.json')
+
+    # CSV File (only banned) - caminho relativo sem usar os
+    BANNED_CSV = 'app/data/banned.csv'
+
 
     # Limites para uploads de arquivos
     MAX_PROFILE_MB = 2
