@@ -124,3 +124,24 @@ def profile():
                 joined_date = created
 
     return render_template('profile.html', user=target, posts=user_posts, is_owner=is_owner, joined_date=joined_date)
+
+@bp.route('/games')
+def games():
+    """
+    Rota da página de jogos educativos sobre meio ambiente.
+    
+    Funcionalidades:
+    - Requer autenticação (usuários não logados são redirecionados para login)
+    - Carrega lista de jogos do arquivo games.json
+    - Exibe jogos interativos embarcados (iframes) de plataformas educativas
+    - Jogos incluem quiz, caça-palavras, memória, palavras cruzadas sobre sustentabilidade
+    """
+    # Restrição: apenas usuários autenticados podem acessar a página de jogos
+    if 'user_id' not in session:
+        return redirect(url_for('auth.login', reason='Faça login para acessar os jogos'))
+    
+    # Carrega lista de jogos do JSON
+    ensure_json_file(current_app.config['GAMES_JSON'])
+    games_list = read_json(current_app.config['GAMES_JSON'])
+    
+    return render_template('games.html', games=games_list)
