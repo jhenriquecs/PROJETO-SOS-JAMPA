@@ -126,30 +126,6 @@ def profile():
 
     return render_template('profile.html', user=target, posts=user_posts, is_owner=is_owner, joined_date=joined_date)
 
-@bp.route('/u/<nickname>')
-def view_user_profile_by_nickname(nickname):
-    """
-    Rota para tentar visualizar perfil pelo nickname.
-    Como o requisito é que o usuário SÓ pode ver o próprio perfil,
-    esta rota verifica se o nickname solicitado é o mesmo do usuário logado.
-    """
-    # Se não tiver logado, manda login
-    if not g.current_user:
-        flash('Faça login para ver perfil.', 'error')
-        return redirect(url_for('auth.login'))
-        
-    # Verifica se o perfil solicitado é o do próprio usuário
-    # Convertendo para lower para garantir comparação correta
-    matches = (g.current_user['nickname'].lower() == nickname.lower())
-    
-    if matches:
-        # Se for o próprio usuário, reutiliza a rota profile
-        return profile()
-    else:
-        # Se for outro usuário, nega acesso
-        flash('Você só pode visualizar seu próprio perfil.', 'warning')
-        return redirect(url_for('main.profile'))
-
 @bp.route('/coming-soon')
 def coming_soon():
     return render_template('base.html')
