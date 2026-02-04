@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>SOS-JAMPA</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
+    <title>{% block title %}SOS-JAMPA{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22><path fill=%22%232e7d32%22 d=%22M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.3 5.4c-25.9 5.9-49.9 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z%22/></svg>">
+    <!-- Core styles (loaded on all pages) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Page-specific styles -->
+    {% block styles %}{% endblock %}
     <script
       src="https://kit.fontawesome.com/20da255e36.js"
       crossorigin="anonymous"
@@ -16,17 +17,37 @@
       src="{{ url_for('static', filename='js/main.js') }}?v=2"
       defer
     ></script>
-    {% block styles %}{% endblock %}
   </head>
   <body>
     <header class="site-header">
-      <div class="brand">
-        <i class="fa-solid fa-leaf"></i>
-        <a href="{{ url_for('main.index') }}">SOS-JAMPA</a>
-      </div>
+      <div class="brand"><a href="{{ url_for('main.index') }}"><i class="fa-solid fa-leaf"></i> SOS-JAMPA</a></div>
+      <nav class="nav">
+        <a href="{{ url_for('main.waste_info') }}">Como descartar</a>
+        <a href="{{ url_for('main.games') }}">Jogos Educativos</a>
+      </nav>
       <div class="nav-right">
-        {% if session.get('user_id') %}
-        <a class="btn" href="{{ url_for('main.profile') }}"
+        {% if request.endpoint == 'main.index' %}
+        <div class="search">
+          <form action="{{ url_for('posts.list_posts') }}" method="get">
+            <input
+              name="q"
+              type="search"
+              placeholder="Buscar denúncias..."
+              aria-label="Buscar"
+              value="{{ request.args.get('q','') }}"
+            />
+            <button type="submit" aria-label="Buscar">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+        {% endif %}
+        {% if session.get('user_id') %} {% if session.get('is_admin') %}
+        <a class="btn btn-danger" href="{{ url_for('admin.dashboard') }}"
+          >Admin</a
+        >
+        {% endif %}
+        <a class="btn" href="{{ url_for('auth.profile') }}"
           >{{ session.get('nickname') }}</a
         >
         <a class="btn" href="{{ url_for('auth.logout') }}">Sair</a>
