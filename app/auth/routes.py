@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for, flash, session, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid, datetime
-from ..utils import read_json, append_json, ensure_json_file
+from ..utils import read_json, append_json, ensure_json_file, upload_image_local, write_json
 from . import bp
 
 def user_by_email(email):
@@ -140,3 +140,76 @@ def logout():
     session.clear()
     flash('Desconectado', 'info')
     return redirect(url_for('main.index'))
+
+@bp.route('/update-profile-pic', methods=['POST'])
+def update_profile_pic():
+    if 'user_id' not in session:
+        return redirect(url_for('auth.login'))
+
+    user_id = session['user_id']
+    file = request.files.get('profile_image')
+    
+    if not file or not file.filename:
+        flash('Nenhuma imagem selecionada.', 'error')
+        return redirect(url_for('main.profile'))
+
+    users = read_json(current_app.config['USERS_JSON'])
+    user = next((u for u in users if u['id'] == user_id), None)
+    
+    if not user:
+        session.clear()
+        return redirect(url_for('auth.login'))
+
+    # Upload local
+    new_url = upload_image_local(file, user_id, 'profile', user.get('profile_image'))
+    
+    if new_url:
+        user['profile_image'] = new_url
+        write_json(current_app.config['USERS_JSON'], users)
+        session['profile_image'] = new_url # Atualiza sessão
+        flash('Foto de perfil atualizada!', 'success')
+    else:
+        flash('Erro ao salvar imagem.', 'error')
+
+    return redirect(url_for('main.profile'))
+
+@bp.route('/update-profile', methods=['POST'])
+def update_profile():
+    if 'user_id' not in session:
+        return redirect(url_for('auth.login'))
+
+    user_id = session['user_id']
+    users = read_json(current_app.config['USERS_JSON'])
+    user = next((u for u in users if u['id'] == user_id), None)
+
+    if not user:
+        session.clear()
+        return redirect(url_for('auth.login'))
+
+    # Update info
+    nome = request.form.get('nome', '').strip()
+    nickname = request.form.get('nickname', '').strip()
+    
+    if nome:
+        user['nome'] = nome
+    if nickname:
+        # Check uniqueness if changed
+        if nickname.lower() != user['nickname'].lower():
+            # simple check
+            exists = any(u for u in users if u['nickname'].lower() == nickname.lower() and u['id'] != user_id)
+            if exists:
+                flash(f'O nickname @{nickname} já está em uso.', 'error')
+                return redirect(url_for('main.profile'))
+        user['nickname'] = nickname
+        session['nickname'] = nickname
+
+    # Cover image
+    cover_file = request.files.get('cover_image')
+    if cover_file and cover_file.filename:
+         new_cover = upload_image_local(cover_file, user_id, 'cover', user.get('cover_image'))
+         if new_cover:
+             user['cover_image'] = new_cover
+
+    write_json(current_app.config['USERS_JSON'], users)
+    flash('Perfil atualizado com sucesso!', 'success')
+    return redirect(url_for('main.profile'))
