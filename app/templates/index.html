@@ -1,11 +1,9 @@
-{% extends 'base.html' %}
-
-{% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
-{% endblock %}
-
-{% block content %}
-{% if current_user %}
+{% extends 'base.html' %} {% block styles %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/pages/home.css') }}"
+/>
+{% endblock %} {% block content %} {% if current_user %}
 <div class="create-post-card">
   <form
     action="{{ url_for('posts.create_post') }}"

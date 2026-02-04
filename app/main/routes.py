@@ -17,6 +17,10 @@ def load_user():
         else:
             session.clear()
 
+@bp.app_context_processor
+def inject_user():
+    return dict(current_user=g.current_user)
+
 @bp.route('/')
 def index():
     users = read_json(current_app.config['USERS_JSON'])
