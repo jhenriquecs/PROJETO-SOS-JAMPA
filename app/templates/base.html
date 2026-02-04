@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
@@ -26,7 +26,9 @@
       </div>
       <div class="nav-right">
         {% if session.get('user_id') %}
-        <span class="btn">{{ session.get('nickname') }}</span>
+        <a class="btn" href="{{ url_for('main.profile') }}"
+          >{{ session.get('nickname') }}</a
+        >
         <a class="btn" href="{{ url_for('auth.logout') }}">Sair</a>
         {% else %}
         <a class="btn" href="{{ url_for('auth.login') }}">Login</a>

@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for, flash, session, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid, datetime
-from ..utils_json import read_json, append_json, ensure_json_file
+from ..utils import read_json, append_json, ensure_json_file
 from . import bp
 
 def user_by_email(email):
