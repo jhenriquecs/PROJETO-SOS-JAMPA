@@ -1,23 +1,16 @@
 <div class="post-card" id="post-{{ p.id }}">
   <div class="post-header">
-    <a
-      href="{{ url_for('main.view_user_profile_by_nickname', nickname=p.author_nick|lower) }}"
-      class="avatar-link"
-      aria-label="Ver perfil de {{ p.author_nick }}"
-    >
+    <div class="avatar-container">
       <img
         class="avatar"
         src="{% if p.author_image %}{{ p.author_image }}{% else %}https://ui-avatars.com/api/?name={{ p.author_nick|urlencode }}&background=random{% endif %}"
         alt="avatar"
         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name={{ p.author_nick|urlencode }}&background=random'"
       />
-    </a>
+    </div>
     <div class="post-meta">
       <div class="nick">
-        <a
-          href="{{ url_for('main.view_user_profile_by_nickname', nickname=p.author_nick|lower) }}"
-          >{{ p.author_nick }}</a
-        >
+        <span>{{ p.author_nick }}</span>
       </div>
       <div class="time">
         {{ p.created_at.split(' ')[1] if p.created_at else '' }}
@@ -61,7 +54,9 @@
   </div>
 
   {% if p.image_path %}
-  <div class="post-image-container {{ 'full-view' if expanded else 'feed-view' }}">
+  <div
+    class="post-image-container {{ 'full-view' if expanded else 'feed-view' }}"
+  >
     <a href="{{ url_for('posts.view_post', post_id=p.id) }}">
       <img
         class="post-img"
@@ -71,9 +66,7 @@
       />
     </a>
   </div>
-  {% endif %}
-
-  {% if p.tag_info %}
+  {% endif %} {% if p.tag_info %}
   <div class="post-tag-info">
     <div class="tag-info-box">
       <div class="tag-info-header">
@@ -85,7 +78,8 @@
         </div>
         {% if p.tag_info.email %}
         <div class="tag-contact-item">
-          <i class="fas fa-envelope"></i> <a href="mailto:{{ p.tag_info.email }}">{{ p.tag_info.email }}</a>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:{{ p.tag_info.email }}">{{ p.tag_info.email }}</a>
         </div>
         {% endif %}
       </div>
@@ -97,12 +91,20 @@
     <div class="delete-confirm-card">
       <p>Excluir este post?</p>
       <div class="confirm-actions">
-          <button type="button" class="confirm-btn danger" onclick="submitDelete('{{ p.id }}')">
-            Sim
-          </button>
-          <button type="button" class="confirm-btn" onclick="closeDeleteConfirm('{{ p.id }}')">
-            Não
-          </button>
+        <button
+          type="button"
+          class="confirm-btn danger"
+          onclick="submitDelete('{{ p.id }}')"
+        >
+          Sim
+        </button>
+        <button
+          type="button"
+          class="confirm-btn"
+          onclick="closeDeleteConfirm('{{ p.id }}')"
+        >
+          Não
+        </button>
       </div>
     </div>
   </div>
