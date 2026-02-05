@@ -1,3 +1,3 @@
 # PROJETO-SOS-JAMPA
 
-![Diagrama UML](Diagrama/Casos_de_Uso_SOS_JAMPA.drawio.png)
+![Diagrama UML](Diagrama/Diagrama UML.drawio.png)
