@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/games.css') }}">
+{% endblock %}
+
+{% block content %}
+<main class="games-page">
+  <section class="games-header">
+    <h1><i class="fa-solid fa-gamepad"></i> Jogos de Educação Ambiental</h1>
+    <p class="subtitle">Aprenda brincando! Conheça conceitos de sustentabilidade e preservação ambiental através de jogos interativos.</p>
+  </section>
+
+  <section class="games-container">
+    {% for game in games %}
+    <article class="game-card">
+      <div class="game-info">
+        <h2>{{ game.title }}</h2>
+        <p class="game-description">{{ game.description }}</p>
+        <span class="game-platform"><i class="fa-solid fa-puzzle-piece"></i> {{ game.platform }}</span>
+      </div>
+      <div class="game-embed">
+        {{ game.iframe | safe }}
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="posts-grid single-post-container">
+  {% with p=post, expanded=True, post_comments=comments %} {% include
+  'components/post_card.html' %} {% endwith %}
+</div>
+{% endblock %}

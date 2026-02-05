@@ -24,8 +24,12 @@ def create_app():
     # Importa e registra os módulos (Blueprints)
     from .auth import bp as auth_bp
     from .main import bp as main_bp   # <=== IMPORTANTE
+    from .posts import bp as posts_bp
+    from .admin import bp as admin_bp
 
     app.register_blueprint(auth_bp, url_prefix='/auth')
+    app.register_blueprint(posts_bp, url_prefix='/posts')
+    app.register_blueprint(admin_bp, url_prefix='/admin')
     app.register_blueprint(main_bp)   # <=== REGISTRA O /
 
     return app

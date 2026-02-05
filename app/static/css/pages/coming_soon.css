@@ -1,0 +1,46 @@
+/* Coming Soon Page Styles */
+.coming-soon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.coming-soon-icon {
+  font-size: 5rem;
+  color: var(--primary-color, #2e7d32);
+  margin-bottom: 1rem;
+}
+
+.coming-soon-title {
+  font-size: 2.5rem;
+  color: var(--primary-color, #2e7d32);
+  margin-bottom: 1rem;
+}
+
+.coming-soon-text {
+  font-size: 1.2rem;
+  color: var(--text-secondary, #65676b);
+  max-width: 500px;
+}
+
+.coming-soon-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: var(--primary-color, #2e7d32);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.coming-soon-btn:hover {
+  background: var(--primary-hover, #1b5e20);
+  transform: translateY(-2px);
+}

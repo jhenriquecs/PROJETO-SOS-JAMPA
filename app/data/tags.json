@@ -1,0 +1,74 @@
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "name": "Poluição de Rios e Nascentes",
+    "email": "ouvidoria@sudema.pb.gov.br",
+    "phone": "83690-1965"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "name": "Esgotos Clandestinos na Orla",
+    "email": "ouvidoria@sudema.pb.gov.br",
+    "phone": "833218-9208"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "name": "Poluição Sonora",
+    "email": "semam@joaopessoa.pb.gov.br",
+    "phone": "833218-9208"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440004",
+    "name": "Desmatamento e Poda Irregular",
+    "email": "semam@joaopessoa.pb.gov.br",
+    "phone": "833213-7012"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440005",
+    "name": "Maus-tratos e Tráfico de Animais",
+    "email": "ouvidoria@ibama.gov.br",
+    "phone": "0800061 8080"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440006",
+    "name": "Descarte Irregular de Lixo",
+    "email": "semam@joaopessoa.pb.gov.br",
+    "phone": "833218-9208"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440007",
+    "name": "Buraco na Via",
+    "email": "prefeitura@joaopessoa.pb.gov.br",
+    "phone": "0800031 1530"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440008",
+    "name": "Iluminação Pública",
+    "email": "prefeitura@joaopessoa.pb.gov.br",
+    "phone": "0800031 1530"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440009",
+    "name": "Animal Perdido / Encontrado",
+    "email": "semam@joaopessoa.pb.gov.br",
+    "phone": "8398651-7190"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440010",
+    "name": "Bem-Estar Animal",
+    "email": "semam@joaopessoa.pb.gov.br",
+    "phone": "833218-9208"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440011",
+    "name": "Resgate de Animais",
+    "email": "zoonoses@joaopessoa.pb.gov.br",
+    "phone": "833218-9357"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440012",
+    "name": "Limpeza de Galerias",
+    "email": "seinfra@joaopessoa.pb.gov.br",
+    "phone": "833214-7275"
+  }
+]

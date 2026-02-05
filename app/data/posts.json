@@ -1,42 +1,16 @@
 [
   {
-    "id": "post1",
+    "id": "cefa2f33-6046-4f95-bce4-6c58c9d1f42a",
     "author_id": "55cf98c5-5487-422d-ad76-ac5b3f4f00d3",
-    "image_path": "uploads/limpeza-sanitária.webp",
-    "description": "Muito lixo acumulado na esquina da rua principal. Precisamos de coleta urgente!",
-    "address": "Rua das Flores, Centro",
-    "created_at": "08:30:00 18/12/2025",
-    "tags": "lixo; entulho",
-    "likes": []
-  },
-  {
-    "id": "post2",
-    "author_id": "user1",
-    "image_path": "uploads/cidades-cratera.webp",
-    "description": "Buraco na calçada atrapalhando a passagem de pedestres.",
-    "address": "Av. Epitácio Pessoa, 1234",
-    "created_at": "09:15:00 18/12/2025",
-    "tags": "calçada; buraco",
-    "likes": []
-  },
-  {
-    "id": "post1",
-    "author_id": "user1",
-    "image_path": "uploads/limpeza-sanitária.webp",
-    "description": "Muito lixo acumulado na esquina da rua principal. Precisamos de coleta urgente!",
-    "address": "Rua das Flores, Centro",
-    "created_at": "08:30:00 18/12/2025",
-    "tags": "lixo; entulho",
-    "likes": []
-  },
-  {
-    "id": "post2",
-    "author_id": "user1",
-    "image_path": "uploads/cidades-cratera.webp",
-    "description": "Buraco na calçada atrapalhando a passagem de pedestres.",
-    "address": "Av. Epitácio Pessoa, 1234",
-    "created_at": "09:15:00 18/12/2025",
-    "tags": "calçada; buraco",
-    "likes": []
+    "image_path": "/static/uploads/55cf98c5-5487-422d-ad76-ac5b3f4f00d3/posts/129e947b-65a1-449e-8e4a-2ea43c39c90a-Imagem_do_WhatsApp_de_2025-11-05_as_20.08.08_3b6a5cea.jpg",
+    "description": "a",
+    "address": "",
+    "created_at": "2026-02-04 00:53:24",
+    "tags": "",
+    "tag_id": null,
+    "likes": [
+      "55cf98c5-5487-422d-ad76-ac5b3f4f00d3"
+    ],
+    "comments_count": 1
   }
 ]
