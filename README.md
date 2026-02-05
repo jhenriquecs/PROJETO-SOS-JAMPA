@@ -1,5 +1,11 @@
 # SOS Jampa
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue) ![Status](https://img.shields.io/badge/status-development-orange) ![Python](https://img.shields.io/badge/python-3.10+-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+
+> **Versão:** 1.0.0 (Beta)  
+> **Instituição:** IFPB  
+> **Atualização:** Fevereiro de 2026
+
 Seja bem-vindo ao repositório do **SOS Jampa**! Este projeto nasceu de uma iniciativa interdisciplinar no IFPB com um objetivo claro: usar a tecnologia para cuidar da nossa cidade.
 
 A ideia aqui não é ser apenas "mais um site", mas uma ferramenta real para conectar os cidadãos de João Pessoa com a sustentabilidade. Queremos facilitar denúncias de descarte irregular de lixo, ensinar sobre reciclagem de um jeito leve e ajudar as pessoas a encontrarem o ponto de coleta mais próximo.
@@ -124,4 +130,3 @@ PROJETO-SOS-JAMPA/
 
 5. **Pronto!** Agora é só abrir seu navegador em:
    http://127.0.0.1:5000
-
